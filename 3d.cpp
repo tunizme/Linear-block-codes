@@ -1,7 +1,6 @@
 #include <iostream>
 #include "encodeLBC.h"
 #include "decodeLBC.h"
-#include "printMatrix.h"
 #include <bitset>
 #include <vector>
 using namespace std;

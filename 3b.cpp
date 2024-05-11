@@ -1,7 +1,6 @@
 #include <iostream>
 #include "encodeLBC.h"
 #include "decodeLBC.h"
-#include "printMatrix.h"
 using namespace std;
 
 void convertMatrix(string inputString, int matrix[][4])
