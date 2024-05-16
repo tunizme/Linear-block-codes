@@ -301,6 +301,19 @@ void fixError(int errorMatrix[][4], int matrix[][11])
         }
     }
 }
+void decodeCodewards(int codewards[][11], int matrixRes[][7])
+{
+    for (int i = 0; i < 17; i++)
+    {
+        for (int j = 0; j < 7; j++)
+        {
+            for (int k = 0; k < 7; k++)
+            {
+                matrixRes[i][j] = codewards[i][j];
+            }
+        }
+    }
+}
 int main()
 {
     string names = "VU TAN DANH HUY PHUOC";
@@ -362,6 +375,18 @@ int main()
         for (int j = 0; j < 11; j++)
         {
             cout << codewords[i][j] << " ";
+        }
+        cout << endl;
+    }
+    int decodeMatrix[17][7];
+    decodeCodewards(codewords, decodeMatrix);
+    cout << "\n\tKet qua giai ma: " << endl;
+    for (int i = 0; i < 17; i++)
+    {
+        cout << "\n\t";
+        for (int j = 0; j < 7; j++)
+        {
+            cout << decodeMatrix[i][j] << " ";
         }
         cout << endl;
     }

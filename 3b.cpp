@@ -157,7 +157,7 @@ void fixError(int errorMatrix[][3], int matrix[][7])
         }
     }
 }
-void decode(int codewards[][7], int matrixRes[][4])
+void decodeCodewards(int codewards[][7], int matrixRes[][4])
 {
     for (int i = 0; i < 17; i++)
     {
@@ -234,7 +234,7 @@ int main()
         cout << endl;
     }
     int decodeMatrix[17][4];
-    decode(codewords, decodeMatrix);
+    decodeCodewards(codewords, decodeMatrix);
     cout << "\n\tKet qua giai ma: " << endl;
     for (int i = 0; i < 17; i++)
     {
@@ -245,6 +245,5 @@ int main()
         }
         cout << endl;
     }
-    cout << endl;
     return 0;
 }
