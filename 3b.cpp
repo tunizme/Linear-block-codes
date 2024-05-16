@@ -157,6 +157,19 @@ void fixError(int errorMatrix[][3], int matrix[][7])
         }
     }
 }
+void decode(int codewards[][7], int matrixRes[][4])
+{
+    for (int i = 0; i < 17; i++)
+    {
+        for (int j = 0; j < 4; j++)
+        {
+            for (int k = 0; k < 4; k++)
+            {
+                matrixRes[i][j] = codewards[i][j];
+            }
+        }
+    }
+}
 int main()
 {
     string names = "VUTANDANHHUYPHUOC";
@@ -220,8 +233,18 @@ int main()
         }
         cout << endl;
     }
-
-    cout << "\n\tKet qua giai ma: " << decodeLBC(codewords) << endl;
+    int decodeMatrix[17][4];
+    decode(codewords, decodeMatrix);
+    cout << "\n\tKet qua giai ma: " << endl;
+    for (int i = 0; i < 17; i++)
+    {
+        cout << "\n\t";
+        for (int j = 0; j < 4; j++)
+        {
+            cout << decodeMatrix[i][j] << " ";
+        }
+        cout << endl;
+    }
     cout << endl;
     return 0;
 }
